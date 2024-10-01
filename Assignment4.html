@@ -1,0 +1,126 @@
+t 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        table{
+            border-spacing: 0;
+           
+            
+        }
+        td{
+            padding: 20px;
+            /* it is used to show content on same line   nowrap*/
+            white-space: nowrap; 
+            height: 50px; 
+            
+        }
+
+        input {
+    padding: 8px; /* Adds padding inside the input */
+    width: 200px;
+  }
+
+  .B{
+    padding: 10px;
+    width: 120px;
+    margin-left: 5px;
+  }
+    </style>
+</head>
+<body>
+    
+    <center> <h1><u>Calculator</u></h1></center>
+   
+   
+   
+   
+   
+
+     <table height="100%" width="100" align="center" border="0" >
+        <tr>
+            <td><p>Enter Number 1:</p></td>
+           
+            <td><input type="text" value=" "  id="1X"  ></td>
+        </tr> 
+
+        <tr>
+            <td> <p>Enter Number 2:</p></td>
+            <td><input type="text" value=" " id="1Y"></td>
+        </tr>
+
+        <tr>
+            <td> Result :</td>
+            <td><input type="text" id="result"/></td>
+        </tr>
+
+     </table>
+    <center>
+     <input class="B" type="button" value="Addition" onclick="add()"/> 
+     <input class="B" type="button" value="Subtraction" onclick="sub()"/> 
+     <input class="B" type="button" value="Multiplication" onclick="Multiplication()"/> 
+     <input class="B" type="button" value="Division" onclick="Division()"/> 
+    </center>
+    <script>
+        
+       
+       
+        function add(){
+           
+            var refToX = document.getElementById("1X");
+            var refToY=document.getElementById("1Y");
+            var refToResult=document.getElementById("result");
+            var x = parseInt(refToX.value);
+            var y=parseInt(refToY.value);
+
+            var result = x + y;
+            refToResult.value = result;
+
+            
+        }
+        function sub(){
+           
+           var refToX = document.getElementById("1X");
+           var refToY=document.getElementById("1Y");
+           var refToResult=document.getElementById("result");
+           var x = parseInt(refToX.value);
+           var y=parseInt(refToY.value);
+
+           var result = x -y;
+           refToResult.value = result;
+
+           
+       }
+       function Multiplication(){
+           
+           var refToX = document.getElementById("1X");
+           var refToY=document.getElementById("1Y");
+           var refToResult=document.getElementById("result");
+           var x = parseInt(refToX.value);
+           var y=parseInt(refToY.value);
+
+           var result = x *y;
+           refToResult.value = result;
+
+           
+       }
+       function Division(){
+           
+           var refToX = document.getElementById("1X");
+           var refToY=document.getElementById("1Y");
+           var refToResult=document.getElementById("result");
+           var x = parseInt(refToX.value);
+           var y=parseInt(refToY.value);
+
+           var result = x/y;
+           refToResult.value = result;
+
+           
+       }
+            </script>
+          
+</body>
+</html>
