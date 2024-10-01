@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 3</title>
+    <style>
+        .first{
+            display: flex;
+            margin-left: 100px;
+           
+        }
+        
+
+        /* table tag styles */
+        .t{
+            padding: 40px;
+            border-spacing: 30px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1><u>Registration Form</u></h1></center>
+    <div class="first">
+                  <div class="v" style="margin-top: 80px; margin-left: 100px;">
+                    <video  height="300" width="400" controls autoplay>
+                        <source src="C:\Users\MRUNALI\OneDrive\Pictures\Sunbeam Institute of IT - Pune & Karad.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="f">
+                    <table width="100%" class="t" >
+                        <tr>
+                            <td>Name</td>
+                            <td><input type="text" value="Enter Text"></td>
+                        </tr>
+                        <tr>
+                            <td>BirtDate</td>
+                            <td><input type="date"></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type="email" value="abc@gmail.com"></td>
+                        </tr>
+                        
+                            <td>Address</td>
+                            <td>
+
+                                <div style="display: flex;">
+                                         <div>
+                                            <select name="state" id="st">
+                                                <option value="Mh">Maharashtra</option>
+                                                <option value="up">UP</option>
+                                                <option value="mp">MP</option>
+                                                <option value="g">Gujrat</option>
+                                              </select><br>
+                                            state 
+                                         </div>
+                                         <div style="margin-left: 5px;">
+                                            <select name="state" id="st">
+                                                <option value="p">Pune</option>
+                                                <option value="m">Mumbai</option>
+                                                <option value="n">Nagpur</option>
+                                                <option value="g">Gondiya</option>
+                                              </select><br>
+                                            District
+                                         </div>
+
+                                         <div style="margin-left: 5px;">
+                                            <select name="state" id="st">
+                                                <option value="n">Nagpur</option>
+                                                <option value="s">Satara</option>
+                                                <option value="I">Indore</option>
+                                                <option value="a">Arjuni/mor</option>
+                                              </select><br>
+                                            city
+                                         </div>
+                                         
+
+
+                                </div>
+
+                                
+                            </td>
+                          
+                            
+                            
+
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td><input type="radio" name="gender">Male
+                                <input type="radio" name="gender">Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Upload Photo</td>
+                            <td><input type="file" value="Browse your photo"></td>
+                        </tr>
+                        <tr>
+                            <td>Select Your Course</td>
+                            <td>
+                                <select name="course" id="c">
+                                    <option value="">select your course</option>
+                                    <option value="f">Full Stack</option>
+                                    <option value="m">Ms-CIT</option>
+                                    <option value="d">Dot Net</option>
+                                    
+                                  </select><br>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="button" value="submit"></td>
+                            <td > <input type="button" value="clear"></td>
+                        </tr>
+
+                    </table>
+                  </div>
+    </div>
+</body>
+</html>
