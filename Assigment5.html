@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="car.jpeg" id="myCar" style="position: absolute; margin-top: 40px;" />
+
+    <br /><br />
+    <div id="QueNos" style="border: 2px solid black; margin-right: 40%; margin-top: 10%;" ></div>
+    <br /><br />
+    X Axis : <input type="text" value="0" name="" id="xAxisInput" /> Y Axis
+    :<input type="text" value="0" name="" id="yAxisInput" /><br /><br />
+    <input type="button" value="Start" onclick="Start()" />
+    <input type="button" value="Stop" onclick="Stop()" />
+    <br />
+
+    <script>
+      //   var counter = 0;
+      var counterX = 0;
+      var counterY = 40;
+      var QueueNoArray = new Array();
+      var horizontalLimit = 900;
+
+      function Stop() {
+        debugger;
+        for (var i = 0; i < QueueNoArray.length; i++) {
+          var QueueNoToDestroy = QueueNoArray[i];
+          window.clearInterval(QueueNoToDestroy);
+        }
+        QueueNoArray = new Array();
+        var refToDiv = document.getElementById("QueNos");
+        refToDiv.innerText = QueueNoArray.toString();
+      }
+
+      function Start() {
+        var QueueNo = window.setInterval(ExecuteMe, 100);
+        QueueNoArray.push(QueueNo);
+
+        // var refToDiv = document.getElementById("QueNos");
+
+        // refToDiv.innerText = QueueNoArray.toString();
+      }
+
+      function ExecuteMe() {
+        // counter = counter + 1;
+        // var refTomyCar = document.getElementById("myCar");
+        // refTomyCar.style.marginLeft = counter + "px";
+        if (counterX < horizontalLimit) {
+          counterX += 2;
+        } else {
+          if(counterY==500){
+            window.location.href="Assigment5.html";
+          }
+          counterY += 2;
+        }
+
+        var refTomyCar = document.getElementById("myCar");
+        refTomyCar.style.marginLeft = counterX + "px"; 
+        refTomyCar.style.marginTop = counterY + "px"; 
+
+        document.getElementById("xAxisInput").value = counterX;
+        document.getElementById("yAxisInput").value = counterY;
+        var refTomyCar = document.getElementById("myCar");
+
+        if (counterX < horizontalLimit) {
+          counterX += 2;
+          refTomyCar.style.marginLeft = counterX + "px"; 
+        } else {
+          counterY += 2;
+          refTomyCar.style.marginTop = counterY + "px"; 
+        }
+
+        document.getElementById("xAxisInput").value = counterX;
+        document.getElementById("yAxisInput").value = counterY;
+      }
+    </script>
+  </body>
+</html>
